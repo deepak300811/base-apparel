@@ -152,6 +152,8 @@ body {
   }
   #main-div .left {
     display: block;
+    max-width: 500px;
+    margin: auto;
   }
   #main-div .left .left-inner .big-text > *:first-child,
   #main-div .left .left-inner .big-text > *:nth-child(2) {
@@ -182,5 +184,11 @@ body {
   }
   #main-div .left .left-inner .logo {
     display: none;
+  }
+  #main-div .left .left-inner .email-input {
+    /* background: coral; */
+    border: 1px solid hsla(0, 9%, 66%, 0.781);
+    margin: 0rem 0rem 1rem 0;
+    border-radius: 30px;
   }
 }
