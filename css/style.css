@@ -1,0 +1,127 @@
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --gred1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gred2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  --max-inner-width: 800px;
+}
+::placeholder {
+  color: hsl(0, 18%, 79%);
+  opacity: 1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Josefin Sans, sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+#main-div {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+#main-div .container {
+  background: url("../images/bg-pattern-desktop.svg") no-repeat center center /
+    cover;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+#main-div .left {
+  height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  padding: 5% 10%;
+  grid-gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+#main-div .left .left-inner {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* grid-row: 1 span / 3; */
+}
+#main-div .left .left-inner .logo {
+  flex: 2 1 auto;
+}
+#main-div .left .left-inner .big-text {
+  flex: 1 1 auto;
+}
+#main-div .left .left-inner .big-text > *:first-child,
+#main-div .left .left-inner .big-text > *:nth-child(2) {
+  letter-spacing: 1rem;
+  font-size: 8vh;
+}
+#main-div .left .left-inner .big-text > *:first-child {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+}
+#main-div .left .left-inner .big-text > *:nth-child(2) {
+  margin-bottom: 1.3rem;
+  color: var(--Dark-Grayish-Red);
+}
+#main-div .left .left-inner .big-text > *:nth-child(3) {
+  color: var(--Desaturated-Red);
+  line-height: 2rem;
+  font-weight: 400;
+  margin-bottom: 10%;
+}
+
+#main-div .left .left-inner .email-input {
+  /* background: coral; */
+  border: 1px solid hsla(0, 9%, 66%, 0.781);
+  padding: 0rem 0rem 0rem 0rem;
+  border-radius: 30px;
+}
+#main-div .left .left-inner .email-input.error {
+  border: 2px solid var(--Soft-Red);
+}
+#main-div .left .left-inner .email-input .form {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+}
+#main-div .left .left-inner .email-input input[type="email"] {
+  padding: 1rem;
+  width: 79%;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+}
+#main-div .left .left-inner .email-input input[type="email"]:focus {
+  outline: none;
+  background: transparent;
+}
+
+#main-div .left .left-inner .email-input.error .form .errorMark {
+  margin-right: 4%;
+}
+#main-div .left .left-inner .email-input button[type="button"] {
+  border-radius: 30px;
+  width: 27%;
+  border: none;
+  padding: 1rem;
+  height: 100%;
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-div .left .left-inner .email-input button[type="button"]:focus {
+  outline: none;
+}
+#main-div .right {
+  background: url("../images/hero-desktop.jpg") no-repeat center center / cover;
+}
